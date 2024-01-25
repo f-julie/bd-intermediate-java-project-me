@@ -74,5 +74,4 @@ public class OrderDao implements ReadOnlyDao<String, Order> {
                    .withConfidence(orderResultItem.getConfidence())
                    .build();
     }
-
 }
