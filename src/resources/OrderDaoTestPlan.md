@@ -10,7 +10,7 @@ pattern "methodName_testCase_expectedBehavior".
 
 Every test plan has:
 1. A name
-    * A description
+   * A description
 2. Given  
    The pre-conditions required for this test to work.
    ATA expects this to be an unordered list. The items should be
@@ -36,6 +36,45 @@ Happy case, verifying that the OrderDao can return an order.
 
 #### When
 1. We call `get()` with that order ID
+
+### Then
+* The result is not null
+
+
+### get_withNullOmaOrder_returnsNull
+Alternate case, verifying that the OrderDAO returns null when given a null order
+
+### Given
+* A null order
+
+### When
+1. We call 'get()' with that order
+
+### Then
+* The result is null
+
+
+### get_withInvalidOrderId_returnsNull
+Alternate case, verifying that the OrderDAO returns null when given an invalid orderId
+
+### Given
+* An invalid orderId
+
+### When
+1. We call 'get()' with that orderId
+
+### Then
+* The result is null
+
+
+### convertToOrderItem_withValidOrderResultItem_returnsOrderItem
+Happy case, verifying that the OrderDao can convert OrderResultItem to OrderItem
+
+### Given
+* a known valid OrderResultItem
+
+### When
+1. We call 'convertToOrderItem()' with that OrderResultItem
 
 ### Then
 * The result is not null
