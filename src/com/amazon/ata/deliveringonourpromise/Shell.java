@@ -60,14 +60,11 @@ public class Shell {
         Shell shell = new Shell(App.getPromiseHistoryClient(), new ATAUserHandler());
         shell.processCommandLineArgs(args);
         // FIXME code automatically runs the exception
-        try
-        {
-            do
-            {
+        try {
+            do {
                 System.out.println(shell.handleUserRequest());
             } while (shell.userHasAnotherRequest());
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("Error encountered. Exiting.");
         }
 
