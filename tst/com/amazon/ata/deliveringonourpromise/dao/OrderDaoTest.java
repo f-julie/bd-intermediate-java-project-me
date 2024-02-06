@@ -18,7 +18,7 @@ public class OrderDaoTest {
     @Test
     void get_existingOrder_orderReturned() {
         // GIVEN - a valid orderId
-        String orderId = "testOrderId";
+        String orderId = "111-7497023-2960775";
 
         // WHEN - get the corresponding order
         Order result = dao.get(orderId);

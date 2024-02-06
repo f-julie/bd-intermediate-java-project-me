@@ -2,6 +2,8 @@ package com.amazon.ata.deliveringonourpromise.dao;
 
 /**
  * DAO interface to abstract calls.
+ * @param <I> Input
+ * @param <O> Output
  */
 public interface ReadOnlyDao<I, O> {
 
