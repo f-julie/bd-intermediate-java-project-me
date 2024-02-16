@@ -2,7 +2,6 @@ package com.amazon.ata.deliveringonourpromise.orderfulfillmentservice;
 
 import com.amazon.ata.deliveringonourpromise.dao.ServiceClient;
 import com.amazon.ata.deliveringonourpromise.types.Promise;
-import com.amazon.ata.deliverypromiseservice.service.DeliveryPromise;
 import com.amazon.ata.orderfulfillmentservice.OrderFulfillmentService;
 import com.amazon.ata.orderfulfillmentservice.OrderPromise;
 
@@ -10,6 +9,12 @@ public class OrderFulfillmentServiceClient implements ServiceClient {
     private OrderFulfillmentService ofService;
 
     public OrderFulfillmentServiceClient(OrderFulfillmentService ofService) { this.ofService = ofService; }
+
+    /**
+     *
+     * @param customerOrderItemId customerOrderItemId
+     * @return return
+     */
 
     public Promise getDeliveryPromiseByOrderItemId(String customerOrderItemId) {
         OrderPromise deliveryPromise = ofService.getOrderPromise(customerOrderItemId);

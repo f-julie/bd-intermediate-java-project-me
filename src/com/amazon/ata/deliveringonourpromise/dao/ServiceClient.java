@@ -3,7 +3,12 @@ package com.amazon.ata.deliveringonourpromise.dao;
 import com.amazon.ata.deliveringonourpromise.types.Promise;
 
 public interface ServiceClient {
-    public Promise getDeliveryPromiseByOrderItemId(String customerOrderItemId);
+    /**
+     *
+     * @param customerOrderItemId customerOrderItemId
+     * @return return
+     */
+    Promise getDeliveryPromiseByOrderItemId(String customerOrderItemId);
 }
 
 /*

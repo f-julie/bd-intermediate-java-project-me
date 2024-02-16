@@ -34,6 +34,10 @@ public class App {
 
     /* helpers */
 
+    /**
+     *
+     * @return return
+     */
     public static GetPromiseHistoryByOrderIdActivity getPromiseHistoryByOrderIdActivity() {
         return new GetPromiseHistoryByOrderIdActivity(getOrderDao(), getPromiseDao());
     }

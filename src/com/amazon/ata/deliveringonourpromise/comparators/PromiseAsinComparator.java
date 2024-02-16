@@ -1,7 +1,7 @@
 package com.amazon.ata.deliveringonourpromise.comparators;
 
-import java.util.Comparator;
 import com.amazon.ata.deliveringonourpromise.types.Promise;
+import java.util.Comparator;
 
 public class PromiseAsinComparator implements Comparator<Promise> {
     // Compare the ASIN and return whichever is greater
