@@ -81,7 +81,7 @@ public class GetPromiseHistoryByOrderIdActivity {
 
         List<OrderItem> customerOrderItems = order.getCustomerOrderItemList();
 
-        if (customerOrderItems == null && customerOrderItems.isEmpty()) {
+        if (customerOrderItems == null || customerOrderItems.isEmpty()) {
             return history;
         }
 
