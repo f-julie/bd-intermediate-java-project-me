@@ -10,27 +10,27 @@ What's the problem with the way the PromiseDao currently works?
 
 What ways will the CS representatives use the new multiple-client PromiseDao?
 
-- 
+- To track multiple sources of promises 
 
 In a few sentences, how does the PromiseDao work right now?
 
-- 
+- The PromiseDao receives orders from the Delivery Promise Service. It has methods get(customerOrderItemId: String) and getDeliveryDateForOrderItem(customerOrderItemId)
 
 Consider a developer unfamiliar with the Missed Promise CLI. Can you add diagrams here that will help them understand how the PromiseDao works right now?
 
-- 
+- A customer submits an order via the Delivery Promise Service. PromiseDao receives the order.
 
 ## Proposed Solution
 
 Describe in a few sentences how your changes will satisfy the use cases you listed above. How will you enable getting promises from OFS? How will you allow new promise sources to be added easily in the future?
 
-- 
+- I will use Generics to make a generic template which receives any type of promise.   
 
 ## Out of Scope
 
 Consider a reviewer who misunderstands this design and believes you're going to make the PromiseDao perfect. What are you not going to do? 
 
-- 
+- I will not change anything else
 
 ## Details
 
@@ -39,14 +39,14 @@ You can leave out classes that don't participate in the new solution, but you sh
 
 In detail, what calls will the software make, and how will it process the results? You may use a single narrative, but it should satisfy all of the use cases you described above.
 
-- 
+- I will add a separate Generics class and make sure all the current methods remain functional.
 
 What do you expect the complexity (BigO) of this solution to be, and why? Clearly define the variable(s) you're using in your BigO notation.
 
-- 
+- I am hoping for linear, which is written O(n).
 
 ## Potential Issues
 
 What could go wrong with your solution? What would surprise a customer service rep who was trying to perform one of the use cases? If you can't think of anything, remove this section.
 
-- 
+- I might write it wrong and everything crashes.
