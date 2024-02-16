@@ -8,6 +8,10 @@ import com.amazon.ata.orderfulfillmentservice.OrderPromise;
 public class OrderFulfillmentServiceClient implements ServiceClient {
     private OrderFulfillmentService ofService;
 
+    /**
+     *
+     * @param ofService ofService
+     */
     public OrderFulfillmentServiceClient(OrderFulfillmentService ofService) {
         this.ofService = ofService;
     }
